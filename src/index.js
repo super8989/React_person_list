@@ -3,15 +3,15 @@ import ReactDOM from "react-dom";
 
 import * as serviceWorker from "./serviceWorker";
 
-const Person = () => {
+const Person = ({ img, name, job }) => {
 	return (
 		<article>
 			<img
 				src='https://randomuser.me/api/portraits/thumb/men/40.jpg'
 				alt='person'
 			/>
-			<h4>Name</h4>
-			<h4>Job</h4>
+			<h4>{name}</h4>
+			<h4>{job}</h4>
 		</article>
 	);
 };
@@ -19,7 +19,7 @@ const Person = () => {
 const PersonList = () => {
 	return (
 		<section>
-			<Person />
+			<Person img='34' name='John' job='Developer' />
 		</section>
 	);
 };
