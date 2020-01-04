@@ -28,8 +28,22 @@ body {
 }
 
 .person h4 {
-	text-transform: capitalize;
+	text-transform: uppercase;
 	margin: 0.5rem 0;
 	letter-spacing: 0.15rem;
-	color: teal;
+	color: gray;
+}
+
+@media screen and (min-width: 768px) {
+	.person-list {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 1rem;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.person-list {
+		grid-template-columns: repeat(3, 1fr);
+	}
 }
