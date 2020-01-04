@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import "./index.css";
 
 import * as serviceWorker from "./serviceWorker";
 
@@ -7,7 +8,7 @@ const Person = ({ img, name, job, children }) => {
 	const url = `https://randomuser.me/api/portraits/thumb/men/${img}.jpg`;
 
 	return (
-		<article>
+		<article className='person'>
 			<img src={url} alt='person' />
 			<h4>{name}</h4>
 			<h4>{job}</h4>
@@ -18,9 +19,11 @@ const Person = ({ img, name, job, children }) => {
 
 const PersonList = () => {
 	return (
-		<section>
+		<section className='person-list'>
 			<Person img='32' name='John' job='Developer' />
-			<Person img='15' name='Dave' job='Designer' />
+			<Person img='15' name='Dave' job='Designer'>
+				<p>Lorem ipsum dolor sit amet</p>
+			</Person>
 			<Person img='81' name='Seth' job='UI/UX' />
 		</section>
 	);
